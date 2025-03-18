@@ -24,9 +24,8 @@ const WordFinder = ({ setResults }) => {
     };
 
     return (
-        <div className="bg-gray-900 p-6 rounded-lg text-white w-96 mx-auto shadow-lg">
+        <div className="bg-gray-900 p-6 rounded-lg text-white shadow-lg">
             <h2 className="text-lg font-bold">Word Finder & Unscrambler</h2>
-            <p className="text-sm text-gray-400">Using JSON dataset</p>
 
             <WordInput
                 title="Known positions"
@@ -55,7 +54,7 @@ const WordFinder = ({ setResults }) => {
             {/* Buttons */}
             <div className="mt-4 flex gap-2">
                 <button
-                    className="flex-1 bg-gray-700 py-2 rounded"
+                    className="flex-1 bg-gray-700 py-2 rounded hover:bg-gray-600 transition"
                     onClick={() => {
                         setKnownLetters(["", "", "", "", ""]);
                         setUnknownLetters(["", "", "", "", ""]);
@@ -65,7 +64,7 @@ const WordFinder = ({ setResults }) => {
                 >
                     Reset
                 </button>
-                <button className="flex-1 bg-blue-500 py-2 rounded" onClick={findWords}>
+                <button className="flex-1 bg-blue-500 py-2 rounded hover:bg-blue-400 transition" onClick={findWords}>
                     Find words
                 </button>
             </div>
