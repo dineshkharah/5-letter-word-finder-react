@@ -1,15 +1,17 @@
 const WordResults = ({ filteredWords = [] }) => {
     return (
-        <div className="mt-4 p-2 bg-gray-800 rounded text-sm max-h-40 overflow-y-auto">
-            <h3 className="text-md font-semibold">Word Results</h3>
+        <div className="p-4 bg-gray-800 rounded-lg text-sm max-h-96 overflow-y-auto">
+            <h3 className="text-lg font-semibold">Word Results</h3>
             {filteredWords.length > 0 ? (
-                <ul className="list-disc list-inside">
+                <div className="grid grid-cols-3 gap-4 mt-2">
                     {filteredWords.map((word, index) => (
-                        <li key={index}>{word}</li>
+                        <div key={index} className="bg-gray-700 px-3 py-2 rounded-lg text-center">
+                            {word}
+                        </div>
                     ))}
-                </ul>
+                </div>
             ) : (
-                <p className="text-gray-400">No words found</p>
+                <p className="text-gray-400 mt-2">No words found</p>
             )}
         </div>
     );

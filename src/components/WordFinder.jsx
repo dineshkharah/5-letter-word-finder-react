@@ -1,9 +1,8 @@
 import { useState, useEffect } from "react";
 import WordInput from "./WordInput";
-import WordResults from "./WordResults";
 import { filterWords } from "../utils/wordFilter";
 
-const WordFinder = () => {
+const WordFinder = ({ setResults }) => {
     const [knownLetters, setKnownLetters] = useState(["", "", "", "", ""]);
     const [unknownLetters, setUnknownLetters] = useState(["", "", "", "", ""]);
     const [notIncluded, setNotIncluded] = useState(["", "", "", "", ""]);
@@ -21,7 +20,7 @@ const WordFinder = () => {
     // Find words based on inputs
     const findWords = () => {
         const results = filterWords(wordDataset, knownLetters, unknownLetters, notIncluded);
-        setFilteredWords(results);
+        setResults(results);
     };
 
     return (
@@ -71,7 +70,6 @@ const WordFinder = () => {
                 </button>
             </div>
 
-            <WordResults filteredWords={filteredWords} />
         </div>
     );
 };
