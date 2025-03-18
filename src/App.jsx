@@ -1,9 +1,19 @@
-function App() {
+import React, { useState } from "react";
+import WordResults from "./components/WordResults";
+import WordFinder from "./components/WordFinder";
+
+const App = () => {
+  const [results, setResults] = useState([]);
+
   return (
-    <div className="flex items-center justify-center min-h-screen bg-blue-500 text-white text-3xl font-bold">
-      Tailwind CSS is Working! 🎉
+    <div className="min-h-screen bg-gray-900 text-white p-6 flex flex-col items-center">
+      <h1 className="text-3xl font-bold mb-4">5-Letter Word Finder</h1>
+      <div className="w-full max-w-lg">
+        <WordFinder setResults={setResults} />
+        <WordResults results={results} />
+      </div>
     </div>
   );
-}
+};
 
 export default App;
