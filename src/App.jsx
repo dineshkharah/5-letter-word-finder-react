@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import WordResults from "./components/WordResults";
 import WordFinder from "./components/WordFinder";
 
 const App = () => {
@@ -10,7 +9,6 @@ const App = () => {
       <h1 className="text-3xl font-bold mb-4">5-Letter Word Finder</h1>
       <div className="w-full max-w-lg">
         <WordFinder setResults={setResults} />
-        <WordResults results={results} />
       </div>
     </div>
   );
