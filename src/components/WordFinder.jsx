@@ -1,23 +1,23 @@
-import { useState } from "react";
-
-// Hardcoded dataset for testing
-const wordDataset = {
-    words: [
-        "aback", "abaft", "abase", "abate", "abbey",
-        "abbot", "abhor", "abide", "abler", "abode",
-        "about", "above", "abuse"
-    ]
-};
+import { useState, useEffect } from "react";
 
 const WordFinder = () => {
     const [knownLetters, setKnownLetters] = useState(["", "", "", "", ""]);
     const [unknownLetters, setUnknownLetters] = useState(["", "", "", "", ""]);
     const [notIncluded, setNotIncluded] = useState(["", "", "", "", ""]);
     const [filteredWords, setFilteredWords] = useState([]);
+    const [wordDataset, setWordDataset] = useState([]);
+
+    // Load words from words.json
+    useEffect(() => {
+        fetch("/words.json")
+            .then(response => response.json())
+            .then(data => setWordDataset(data.words))
+            .catch(error => console.error("Error loading words:", error));
+    }, []);
 
     // Function to filter words based on user input
     const findWords = () => {
-        let possibleWords = wordDataset.words;
+        let possibleWords = [...wordDataset];
 
         console.log("Initial word list:", possibleWords);
 
@@ -51,9 +51,6 @@ const WordFinder = () => {
         setFilteredWords(possibleWords);
     };
 
-
-
-
     // Handle Not Included Letter Input with Dynamic Rows of 5
     const handleNotIncludedChange = (index, value) => {
         let newNotIncluded = [...notIncluded];
@@ -70,7 +67,7 @@ const WordFinder = () => {
     return (
         <div className="bg-gray-900 p-6 rounded-lg text-white w-96 mx-auto shadow-lg">
             <h2 className="text-lg font-bold">Word Finder & Unscrambler</h2>
-            <p className="text-sm text-gray-400">Default</p>
+            <p className="text-sm text-gray-400">Using JSON dataset</p>
 
             {/* Known Positions */}
             <div className="mt-4">
@@ -143,12 +140,6 @@ const WordFinder = () => {
                     setFilteredWords([]);
                 }}>Reset</button>
                 <button className="flex-1 bg-blue-500 py-2 rounded" onClick={findWords}>Find words</button>
-            </div>
-
-            {/* Display Dataset for Testing */}
-            <div className="mt-4 p-2 bg-gray-800 rounded text-xs max-h-40 overflow-y-auto">
-                <h3 className="text-sm font-semibold">Test Dataset</h3>
-                <p>{wordDataset.words.join(", ")}</p>
             </div>
 
             {/* Display Found Words */}
