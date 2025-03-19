@@ -1,0 +1,1 @@
+// Future update: It will contain the ThemeToggle component which will be used to toggle between themes (Light and Dark).
