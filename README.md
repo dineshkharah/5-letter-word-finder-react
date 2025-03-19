@@ -12,7 +12,7 @@ A simple and responsive 5-letter word finder and unscrambler built with **React,
 
 ## 🚀 **Live Demo**
 
-[https://5-letter-word-finder.vercel.app/](#) _(Update this with your deployed Vercel link)_
+[https://5-letter-word-finder.vercel.app/](#)
 
 ---
 
