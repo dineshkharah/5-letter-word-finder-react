@@ -4,15 +4,15 @@ A simple and responsive 5-letter word finder and unscrambler built with **React,
 
 ## 📖 **Table of Contents**
 
-- [🚀 Live Demo](#-live-demo)
-- [📌 Features](#-features)
-- [🛠️ Tech Stack](#-tech-stack)
-- [📦 Installation & Setup](#-installation--setup)
-- [🤝 Contributing](#-contributing)
+- 🚀 [Live Demo](#-live-demo)
+- 📌 [Features](#-features)
+- 🛠️ [Tech Stack](#-tech-stack)
+- 📦 [Installation & Setup](#-installation--setup)
+- 🤝 [Contributing](#-contributing)
 
 ## 🚀 **Live Demo**
 
-[https://5-letter-word-finder.vercel.app/](#)
+🚀 **[5 letter word finder](https://5-letter-word-finder.vercel.app/)**
 
 ---
 
