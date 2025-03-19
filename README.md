@@ -1,12 +1,75 @@
-# React + Vite
+# **5-Letter Word Finder & Unscrambler**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple and responsive 5-letter word finder and unscrambler built with **React, Vite, Tailwind CSS**, and hosted on **Vercel**.
 
-Currently, two official plugins are available:
+## 📖 **Table of Contents**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [🚀 Live Demo](#-live-demo)
+- [📌 Features](#-features)
+- [🛠️ Tech Stack](#-tech-stack)
+- [📦 Installation & Setup](#-installation--setup)
+- [🤝 Contributing](#-contributing)
 
-## Expanding the ESLint configuration
+## 🚀 **Live Demo**
 
-If you are developing a production application, we recommend using TypeScript and enable type-aware lint rules. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+[https://5-letter-word-finder.vercel.app/](#) _(Update this with your deployed Vercel link)_
+
+---
+
+## 📌 **Features**
+
+✅ Find words based on known and unknown letters  
+✅ Exclude letters dynamically  
+✅ Clean and user-friendly UI  
+✅ Fully responsive design  
+✅ Fast performance with **Vite**  
+✅ Deployed on **Vercel**
+
+---
+
+## 🛠️ **Tech Stack**
+
+- **Frontend:** React, Vite, Tailwind CSS
+- **Hosting:** Vercel
+
+---
+
+## 📦 **Installation & Setup**
+
+1️⃣ **Clone the Repository**
+
+```sh
+git clone https://github.com/dineshkharah/5-letter-word-finder.git
+cd 5-letter-word-finder
+```
+
+2️⃣ **Install Dependencies**
+
+```sh
+npm install
+```
+
+️3️⃣ **Run Locally**
+
+```sh
+npm run dev
+```
+
+---
+
+## 🤝 **Contributing**
+
+Contributions are always welcome! 🚀
+
+If you’d like to contribute:
+
+1. **Fork the repository**
+2. **Create a new branch** (`feature/your-feature`)
+3. **Commit your changes** (`git commit -m "Add new feature"`)
+4. **Push to your branch** (`git push origin feature/your-feature`)
+5. **Open a pull request**
+
+Feel free to open an issue for any bugs or feature requests.  
+Happy coding! 🎉
+
+⭐ **If you find this project useful, don't forget to give it a star on GitHub!** ⭐
