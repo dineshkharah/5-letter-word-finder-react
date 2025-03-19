@@ -36,14 +36,15 @@ const WordInput = ({ title, subtitle, letters, setLetters, bgColor, isGrid }) =>
         <div className="mt-4">
             <h3 className="text-md font-semibold">{title}</h3>
             <p className="text-xs text-gray-400">{subtitle}</p>
-            <div className={isGrid ? "grid grid-cols-5 gap-2 mt-2" : "flex gap-2 mt-2"}>
+            <div className="grid grid-cols-5 gap-0.5 mt-2">
+
                 {letters.map((letter, index) => (
                     <input
                         key={index}
                         id={`${title.replace(/\s+/g, "")}-${index}`}
                         type="text"
                         maxLength="1"
-                        className={`w-12 h-12 text-center rounded-lg text-lg font-bold cursor-pointer caret-transparent
+                        className={`w-14 h-14 sm:w-12 sm:h-12 text-center rounded-lg text-lg font-bold cursor-pointer caret-transparent
                             ${letter ? bgColor : "bg-gray-700"} 
                             ${focusedIndex === index ? "shadow-md shadow-blue-400 " : ""} transition-all`}
                         value={letter}
