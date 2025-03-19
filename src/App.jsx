@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import WordResults from "./components/WordResults";
 import WordFinder from "./components/WordFinder";
+import Footer from "./components/Footer";
 
 const App = () => {
   const [results, setResults] = useState([]);
@@ -15,7 +16,7 @@ const App = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-screen min-h-screen bg-gray-900 text-white p-4 md:p-8">
+    <div className="flex flex-col items-center w-screen min-h-screen bg-gray-900 text-white pt-4">
       <h1 className="text-2xl font-bold text-center mb-5">5-Letter Word Finder</h1>
 
       {/* Responsive Layout */}
@@ -31,6 +32,7 @@ const App = () => {
           <WordResults filteredWords={results} allWords={wordDataset} />
         </div>
       </div>
+      <Footer />
     </div>
   );
 };
