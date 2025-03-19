@@ -14,7 +14,7 @@ const Footer = () => {
                     <FaLinkedin className="text-lg" />
                 </a>
                 <span>|</span>
-                <span className="whitespace-nowrap">Created by
+                <span className="whitespace-nowrap">Created by&nbsp;
                     <a
                         href="https://github.com/dineshkharah"
                         target="_blank"
