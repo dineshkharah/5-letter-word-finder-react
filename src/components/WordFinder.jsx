@@ -52,9 +52,9 @@ const WordFinder = ({ setResults }) => {
             />
 
             {/* Buttons */}
-            <div className="mt-4 flex gap-2">
+            <div className="mt-4 flex flex-col sm:flex-row gap-2">
                 <button
-                    className="flex-1 bg-gray-700 py-2 rounded hover:bg-gray-600 transition"
+                    className="w-full sm:flex-1 bg-gray-700 py-2 rounded hover:bg-gray-600 transition"
                     onClick={() => {
                         setKnownLetters(["", "", "", "", ""]);
                         setUnknownLetters(["", "", "", "", ""]);
@@ -64,10 +64,11 @@ const WordFinder = ({ setResults }) => {
                 >
                     Reset
                 </button>
-                <button className="flex-1 bg-blue-500 py-2 rounded hover:bg-blue-400 transition" onClick={findWords}>
+                <button className="w-full sm:flex-1 bg-blue-500 py-2 rounded hover:bg-blue-400 transition" onClick={findWords}>
                     Find words
                 </button>
             </div>
+
 
         </div>
     );

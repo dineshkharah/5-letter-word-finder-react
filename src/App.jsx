@@ -15,17 +15,19 @@ const App = () => {
   }, []);
 
   return (
-    <div className="flex flex-col items-center w-screen min-h-screen bg-gray-900 text-white p-8">
+    <div className="flex flex-col items-center w-screen min-h-screen bg-gray-900 text-white p-4 md:p-8">
       <h1 className="text-2xl font-bold text-center mb-5">5-Letter Word Finder</h1>
 
-      <div className="flex justify-center items-start gap-8 w-full max-w-7xl">
-        {/* Left side - Dynamic Height */}
-        <div className="w-96 bg-gray-800 p-6 rounded-lg border-2 border-white/40 shadow-lg flex flex-col">
+      {/* Responsive Layout */}
+      <div className="flex flex-col lg:flex-row justify-center items-center gap-6 w-full max-w-7xl">
+
+        {/* Word Finder - Responsive Width */}
+        <div className="w-full lg:w-96 bg-gray-800 p-6 rounded-lg border-2 border-white/40 shadow-lg flex flex-col">
           <WordFinder setResults={setResults} />
         </div>
 
-        {/* Right side - Match Left Side Height */}
-        <div className="flex-1 bg-gray-800 p-6 rounded-lg border-2 border-white/40 shadow-lg flex flex-col">
+        {/* Word Results - Flexible */}
+        <div className="w-full lg:flex-1 bg-gray-800 p-6 rounded-lg border-2 border-white/40 shadow-lg flex flex-col">
           <WordResults filteredWords={results} allWords={wordDataset} />
         </div>
       </div>
